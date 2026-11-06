@@ -17,4 +17,24 @@ public class ExerciseTests
         Assert.Equal(24, actual);
     }
     // TODO: Skriv to selvstendige Fact-tester.
+    [Fact]
+    public void Caltulate_ZeroCrewForFourDays_Returns0()
+    {
+        int crewCount = 0;
+        int days = 4;
+
+        int actual = FuelCalculator.Calculate(crewCount, days);
+
+        Assert.Equal(0, actual);
+    }
+        [Fact]
+    public void Caltulate_OneCrewForOneDays_Returns2()
+    {
+        int crewCount = 1;
+        int days = 1;
+
+        int actual = FuelCalculator.Calculate(crewCount, days);
+
+        Assert.Equal(2, actual);
+    }
 }

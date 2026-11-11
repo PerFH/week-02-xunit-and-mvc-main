@@ -63,11 +63,11 @@ Følg disse handlingene på papir:
 
 | Handling | Hva returnerer Pop? | Count etter handlingen |
 |---|---|---|
-| Ny stabel | – | |
-| `Push("A")` | – | |
-| `Push("B")` | – | |
-| `Pop()` | | |
-| `Pop()` | | |
+| Ny stabel | – | 0 |
+| `Push("A")` | – | 1 |
+| `Push("B")` | – | 2 |
+| `Pop()` | B | 1 |
+| `Pop()` | A | 0 |
 
 Hvilken verdi må komme ut først dersom stabelen følger LIFO-prinsippet?
 
@@ -84,7 +84,7 @@ Finn ut:
 Åpne terminalen o kjør:
 
 ```sh
-dotnet build 05-unntak-og-generics/Exercise.slnx
+
 dotnet test 05-unntak-og-generics/Tests/Tests.csproj
 ```
 

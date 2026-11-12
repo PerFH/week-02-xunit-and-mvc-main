@@ -11,8 +11,10 @@ public class ExerciseTests
     [InlineData(2, false, 200)]
     [InlineData(1, true, 120)]
     [InlineData(2, true, 240)]
+    [InlineData(20, false, 2000)]
+    [InlineData(20, true, 2400)]
     public void Calculate_ReturnsAgreedPrice(int count, bool priority, int expected)
     {
-        Assert.Equal(expected, LaunchPrice.Calculate(count, priority));
+        Assert.Equal(expected, LaunchPrice.newCalculate(count, priority));
     }
 }

@@ -38,4 +38,3 @@ Dette virker fremdeles helt bakvendt for meg, bortkastet tid å skrive en test d
 Fordi man endrer funksjonalitet på metoden. Blir det fremdeles funksjonsendring dersom man hadde kommentert "//makes complete true" i pseudokode?
 4. Hvorfor trenger du ikke nødvendigvis endre koden i Refactor-fasen?
 Koden kan forbedres, men det kommer helt ann på hva for funksjonalitet man ønsker, slik som det er nå så vil funksjonaliteten endres dersom man endrer på complete, og slik som jeg forstår det blir det da ikke en refaktorering.
-

@@ -1,3 +1,4 @@
+using System.Collections;
 using SpaceAcademy;
 
 namespace SpaceAcademy.ConsoleApp;
@@ -23,6 +24,22 @@ public class MissionView
 
     public void ShowTasks(List<MissionTask> tasks)
     {
-        // TODO: Vis tommelding eller alle oppdrag. Ikke endre tasks.
+        if (tasks.Count == 0)
+        {
+        Console.WriteLine("Ingen oppdrag");
+        }
+        else foreach (MissionTask task in tasks)
+        {
+            string statusText;
+            if (task.IsCompleted) 
+            {
+                statusText = "Fullført";
+            }
+            else
+            {
+                statusText = "Venter";
+            }
+            Console.WriteLine($"{task.Id}: {task.Title}[{statusText}]");
+        }
     }
 }

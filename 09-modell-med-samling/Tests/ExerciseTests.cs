@@ -52,4 +52,41 @@ public class ExerciseTests
         copy.Clear();
         Assert.Equal(1, board.Count);
     }
+    [Fact]
+    public void GetAll_ReturnsEmptyCopy()
+    {
+        var board = new MissionBoard();
+        Assert.Equal(0, board.Count);
+        var copy = board.GetAll();
+        Assert.Empty(copy);
+
+    }
+    [Fact]
+    public void CanCompleteSameIDTwice()
+    {
+        var board = new MissionBoard();
+        var task = board.Add("Lad Rover");
+        Assert.True(board.Complete(1));
+        Assert.True(board.Complete(1));
+        Assert.True(task.IsCompleted);
+        Assert.Equal(1, board.Count);
+    }
+    [Fact]
+    public void TwoIndependentMissionBoards()
+    {
+        var board = new MissionBoard();
+        var board2 = new MissionBoard();
+        var task = board.Add("Lad Rover");
+        Assert.Equal(1, board.Count);
+        Assert.Equal(0, board2.Count);
+        Assert.Equal(1, task.Id);
+    }
+    [Fact]
+    public void CopiesListWithObjects()
+    {
+        var board = new MissionBoard();
+        var task = board.Add("Lad rover");
+        var copy = board.GetAll();
+        Assert.Same(task, copy[0]);
+    }
 }

@@ -7,7 +7,7 @@ public class MissionView
     public void ShowMenu()
     {
         // TODO: Legg til menytekst for valg 4.
-        Console.WriteLine("1. Legg til | 2. Vis alle | 3. Fullfør | 0. Avslutt");
+        Console.WriteLine("1. Legg til | 2. Vis alle | 3. Fullfør | 4. Vis ufulførte | 0. Avslutt");
     }
 
     public string ReadInput(string prompt)
